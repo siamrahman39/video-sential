@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-var secret = []byte("10202siam@") 
+var secret = []byte("Your_Secret_key") 
 func GenerateToken(userID uint) (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"sub": userID,
